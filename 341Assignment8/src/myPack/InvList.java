@@ -6,6 +6,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -17,11 +20,7 @@ public class InvList {
 	String fileName;
 	
 	InvList(String fileName){
-		if(fileName == "") {
-			this.fileName = "/C:/Users/Computer Science/Desktop/bookList.txt";
-		}else {
-			this.fileName = fileName;
-		}
+		this.fileName = "bookList.txt";
 		list = new HashMap<Integer,Book>();
 		deserialize();
 	}
